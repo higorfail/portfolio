@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Higor's Design Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="header">
+<nav>
+    <a href="index.html"><img src="img/logopng.gif"></a>
+    
+<div class="nav-link">
+<ul>
+<li><a href="contato.html">CONTATO</a></li>
+<li><a href="processo.html">PROCESSO</a></li>
+
+</ul>
+<section class="insta">
+<a href="http://instagram.com/higorsdesign"target="_blank"><img src="img/instagram.png" ></a>
+</section>
+<section class="zap">
+<a href="https://wa.me/5547997140392"target="_blank"><img src="img/Assewhatsappt 1.png"></a>
+</section>
+
+</div>    
+</div></nav>
+
+</div>
+</div>
+    </section>
+ 
+<div class="container">
+<form onsubmit="sendEmail(); reset(); return false;">
+<h3>📣 Fala comigo!</h3>
+<input type="text" id="name" placeholder="Seu nome" required><br>
+<input type="email" id="email" placeholder="Seu e-mail" required><br>
+<input type="text" id="whats" placeholder="WhatsApp"><br>
+<textarea name="" id="Mensagem" cols="30" rows="4" placeholder="Como posso te ajudar?"></textarea><br>
+<button type="Enviar">Enviar</button>
+
+
+</form>
+
+</div>
+    
+    <selection class="footer">
+<p>© 2022 Higor & Bruno</p>
+
+    </selection>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+function sendEmail(){
+    Email.send({
+    Host : "smtp.gmail.com",
+    Username : "higorfmarcelino@gmail.com",
+    Password : "d",
+    To : 'higorfmarcelino@gmail.com',
+    From : document.getElementById("email").value,
+    Subject : "Novo Freela",
+    Body : "Name: "+ document.getElementById("name").value
+    + "<br> email: " + document.getElementById("email").value
+    + "<br> whatsapp: " + document.getElementById("whats").value
+    + "<br> mensagem: " + document.getElementById("mensagem").value
+}).then(
+  message => alert("Mensagem enviada com sucesso!")
+);
+}
+    </script>
+</body>
+</html>
